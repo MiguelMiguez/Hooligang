@@ -1,0 +1,513 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "emberclaws";
+  src: url("/fonts/Emberclaws.ttf") format("truetype");
+}
+.portadaTurno, .portadaTurnoCorte {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  background-image: linear-gradient(0deg, rgba(29, 29, 29, 0.591) 40%, rgba(171, 171, 171, 0) 100%), url(../img/PortadaMobile.jpeg);
+  background-size: cover;
+  background-position: right center;
+  justify-content: center;
+}
+.portadaTurno .navContainer, .portadaTurnoCorte .navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(15, 15, 15);
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.portadaTurno .navContainer img, .portadaTurnoCorte .navContainer img {
+  height: 60%;
+  margin-left: 20px;
+}
+.portadaTurno .navContainer .menuHamburguesa, .portadaTurnoCorte .navContainer .menuHamburguesa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.portadaTurno .navContainer .menuHamburguesa div, .portadaTurnoCorte .navContainer .menuHamburguesa div {
+  height: 3px;
+  border-radius: 5px;
+  width: 65%;
+  background-color: white;
+}
+.portadaTurno .navContainer .menuHamburguesa:hover, .portadaTurnoCorte .navContainer .menuHamburguesa:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.portadaTurno .navContainer .navGrande, .portadaTurnoCorte .navContainer .navGrande {
+  display: none;
+}
+.portadaTurno .navContainer nav, .portadaTurnoCorte .navContainer nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 9999;
+  background-color: rgb(15, 15, 15);
+  top: 0;
+  right: -500px;
+  height: 100vh;
+  width: 100%;
+  max-width: 300px;
+  transition: 1s;
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
+}
+.portadaTurno .navContainer nav .closeContainer, .portadaTurnoCorte .navContainer nav .closeContainer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+}
+.portadaTurno .navContainer nav .closeContainer .closeExtra, .portadaTurnoCorte .navContainer nav .closeContainer .closeExtra {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.portadaTurno .navContainer nav .closeContainer .closeExtra span, .portadaTurnoCorte .navContainer nav .closeContainer .closeExtra span {
+  color: white;
+  font-size: 2.5rem;
+  font-family: sans-serif;
+  transition: 300ms;
+  text-shadow: 0 2px 10px rgb(0, 0, 0);
+}
+.portadaTurno .navContainer nav .closeContainer .closeExtra:hover span, .portadaTurnoCorte .navContainer nav .closeContainer .closeExtra:hover span {
+  color: red;
+}
+.portadaTurno .navContainer nav ul, .portadaTurnoCorte .navContainer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  list-style-type: none;
+  padding: 2rem;
+}
+.portadaTurno .navContainer nav ul li a, .portadaTurnoCorte .navContainer nav ul li a {
+  color: white;
+  font-family: "emberclaws";
+  font-size: 2rem;
+  transition: 300ms;
+  text-shadow: 0 0px 10px black;
+}
+.portadaTurno .navContainer nav ul li a:hover, .portadaTurnoCorte .navContainer nav ul li a:hover {
+  color: #FED21A;
+}
+.portadaTurno .navContainer nav img, .portadaTurnoCorte .navContainer nav img {
+  width: 85%;
+  height: auto;
+  margin-top: 10rem;
+}
+.portadaTurno h2, .portadaTurnoCorte h2 {
+  margin-bottom: 2rem;
+  color: #FED21A;
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: "emberclaws";
+  -webkit-text-stroke: 0.5px #522FA1;
+  text-shadow: 0 2px 10px rgb(0, 0, 0);
+}
+.portadaTurno button, .portadaTurnoCorte button {
+  background-color: #522FA1;
+  color: #FED21A;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 2px black;
+  width: 250px;
+  font-family: "emberclaws";
+  font-size: 1.5rem;
+  border: 1px outset #522FA1;
+  cursor: pointer;
+}
+.portadaTurno button:hover, .portadaTurnoCorte button:hover {
+  background-color: #FED21A;
+  color: #522FA1;
+  border: 1px outset #FED21A;
+  transition: 0.5s;
+}
+.portadaTurno .socialMedia, .portadaTurnoCorte .socialMedia {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.portadaTurno .socialMedia a, .portadaTurnoCorte .socialMedia a {
+  color: white;
+  font-family: "emberclaws";
+  font-size: 1.5rem;
+}
+
+.portadaTurnoCorte {
+  height: auto;
+  background-image: none;
+}
+
+@media screen and (min-width: 768px) {
+  .portadaTurno, .portadaTurnoCorte {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5914740896) 40%, rgba(171, 171, 171, 0) 100%), url(../img/PortadaDesktop.png);
+  }
+  .portadaTurno .navContainer, .portadaTurnoCorte .navContainer {
+    justify-content: space-around;
+    align-items: center;
+  }
+  .portadaTurno .navContainer img, .portadaTurnoCorte .navContainer img {
+    margin: 0;
+  }
+  .portadaTurno .navContainer .menuHamburguesa, .portadaTurnoCorte .navContainer .menuHamburguesa {
+    display: none;
+  }
+  .portadaTurno .navContainer nav, .portadaTurnoCorte .navContainer nav {
+    display: none;
+  }
+  .portadaTurno .navContainer .navGrande, .portadaTurnoCorte .navContainer .navGrande {
+    display: block;
+    width: 70%;
+  }
+  .portadaTurno .navContainer .navGrande ul, .portadaTurnoCorte .navContainer .navGrande ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+  }
+  .portadaTurno .navContainer .navGrande ul li a, .portadaTurnoCorte .navContainer .navGrande ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "emberclaws";
+    font-size: 1.5rem;
+    transition: color 0.2s;
+  }
+  .portadaTurno .navContainer .navGrande ul li a:hover, .portadaTurnoCorte .navContainer .navGrande ul li a:hover {
+    color: #FED21A;
+    -webkit-text-stroke: 0.5px #522FA1;
+  }
+}
+.servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(30, 30, 30);
+  /* background-image: url(../img/navaja.png) ;
+     background-repeat: repeat;
+     background-size: 400px 400px;
+     background-position: center center;
+  */
+}
+.servicios h2 {
+  margin: 2rem;
+  color: #FED21A;
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: "emberclaws";
+  -webkit-text-stroke: 0.5px #522FA1;
+  text-shadow: 0 0px 4px rgb(0, 0, 0);
+}
+.servicios .imageService .serviciosPeluqueriaCorte {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 300px;
+  height: 300px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5914740896) 100%, rgba(171, 171, 171, 0) 100%), url(../img/imagecorte.jpeg);
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+  box-shadow: 0px 8px 9px 0px rgba(0, 0, 0, 0.5019607843);
+  transition: 1s;
+}
+.servicios .imageService .serviciosPeluqueriaCorte h3 {
+  font-family: "Oswald", sans-serif;
+}
+.servicios .imageService .serviciosPeluqueriaCorte:hover {
+  transform: scale(1.05);
+}
+.servicios .imageService .serviciosPeluqueriaBarba {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 300px;
+  height: 300px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5914740896) 100%, rgba(171, 171, 171, 0) 100%), url(../img/image2.jpeg);
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+  box-shadow: 0px 8px 9px 0px rgba(0, 0, 0, 0.5019607843);
+  transition: 1s;
+}
+.servicios .imageService .serviciosPeluqueriaBarba h3 {
+  font-family: "Oswald", sans-serif;
+}
+.servicios .imageService .serviciosPeluqueriaBarba:hover {
+  transform: scale(1.05);
+}
+.servicios .imageService .serviciosPeluqueriaColor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 300px;
+  height: 300px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5914740896) 100%, rgba(171, 171, 171, 0) 100%), url(../img/image4.jpeg);
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  margin: 1rem 0.5rem 2rem 0.5rem;
+  box-shadow: 0px 8px 9px 0px rgba(0, 0, 0, 0.5019607843);
+  transition: 1s;
+}
+.servicios .imageService .serviciosPeluqueriaColor h3 {
+  font-family: "Oswald", sans-serif;
+}
+.servicios .imageService .serviciosPeluqueriaColor:hover {
+  transform: scale(1.05);
+}
+
+.servicios::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to bottom, transparent, rgb(30, 30, 30));
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .servicios .imageService {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4rem;
+  }
+  .servicios .imageService .serviciosPeluqueriaCorte {
+    width: 220px;
+    height: 220px;
+  }
+  .servicios .imageService .serviciosPeluqueriaBarba {
+    width: 220px;
+    height: 220px;
+  }
+  .servicios .imageService .serviciosPeluqueriaColor {
+    width: 220px;
+    height: 220px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .servicios {
+    height: 100vh;
+  }
+  .servicios .imageService {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4rem;
+    gap: 2rem;
+  }
+}
+.map {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(20, 20, 20);
+  /* margin: 2rem; */
+  /*background-image: url(../img/navaja.png) ;
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  background-position: center center;*/
+}
+.map h2 {
+  margin: 2rem;
+  color: #FED21A;
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: "emberclaws";
+  -webkit-text-stroke: 0.5px #522FA1;
+  text-shadow: 0 0px 4px rgb(0, 0, 0);
+}
+.map iframe {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 8px 9px 0px rgba(0, 0, 0, 0.5019607843);
+  margin: 4rem;
+}
+
+.map::before {
+  content: "";
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: linear-gradient(to top, transparent, rgb(30, 30, 30));
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .map iframe {
+    width: 600px;
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+  .map iframe {
+    width: 1000px;
+    height: 700px;
+  }
+}
+@media only screen and (min-width: 1501px) {
+  .map {
+    height: 100vh;
+  }
+  .map iframe {
+    width: 1500px;
+    height: 700px;
+  }
+}
+.agendaTurno {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(30, 30, 30);
+}
+.agendaTurno h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #FED21A;
+  font-size: 3.5rem;
+  text-align: center;
+  font-family: "emberclaws";
+  -webkit-text-stroke: 0.5px #522FA1;
+  text-shadow: 0 2px 10px rgb(0, 0, 0);
+}
+.agendaTurno .calendario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+.agendaTurno .ases {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.agendaTurno .ases img {
+  width: 40px;
+  height: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+  .agendaTurno {
+    height: 100vh;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #522FA1;
+  color: white;
+  padding: 3rem 0rem 3rem 0rem;
+}
+footer .branding .brand {
+  display: none;
+}
+footer .direccion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+footer .direccion h2 {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+footer .direccion h3 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+footer .buttonFooter .btnTurno {
+  margin: 1rem;
+  background-color: #FED21A;
+  color: #522FA1;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0px 0px 2px black;
+  width: 250px;
+  font-family: "emberclaws";
+  font-size: 1.5rem;
+  border: 1px outset #522FA1;
+  cursor: pointer;
+}
+footer .infoFooter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .infoFooter .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  gap: 0.5rem;
+}
+footer .infoFooter .socialMedia a {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+  footer .branding .brand {
+    display: block;
+    width: 300px;
+  }
+  footer .infoFooter {
+    display: flex;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */

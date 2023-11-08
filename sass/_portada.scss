@@ -1,0 +1,218 @@
+.portadaTurno, .portadaTurnoCorte{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(0deg, rgba(29, 29, 29, 0.591) 40%, rgba(171,171,171,0) 100%),url(../img/PortadaMobile.jpeg);
+    background-size: cover;
+    background-position: right center;
+    justify-content: center;
+
+    
+    .navContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(15, 15, 15);
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        img{
+          height: 60%;
+          margin-left: 20px;
+        }
+        .menuHamburguesa {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          width: 60px;
+          height: 60px;
+          margin-right: 10px;
+          border-radius: 10px;
+          transition: 0.4s;
+          cursor: pointer;
+          div {
+            height: 3px;
+            border-radius: 5px;
+            width: 65%;
+            background-color: white;
+          }
+        }
+        .menuHamburguesa:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+        .navGrande{
+          display: none;
+        }
+    
+        nav {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          z-index: 9999;
+          background-color: rgb(15, 15, 15);
+          top: 0;
+          right: -500px;
+          height: 100vh;
+          width: 100%;
+          max-width: 300px;
+          transition: 1s;
+          box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.8);
+          .closeContainer{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            .closeExtra{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 60px;
+              height: 60px;
+              margin-right: 10px;
+              border-radius: 10px;
+              transition: 0.4s;
+              span{
+                color: white;
+                font-size: 2.5rem;
+                font-family: sans-serif;
+                transition: 300ms;
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+              }
+            }
+            .closeExtra:hover{
+              span{
+                color: red;
+              }
+            }
+          }
+          ul{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 100%;
+            list-style-type: none;
+            padding: 2rem;
+            li{
+              a{
+                color: white;
+                font-family: $letra;
+                font-size: 2rem;
+                transition: 300ms;
+                text-shadow: 0 0px 10px black;
+              }
+              a:hover{
+                color: $amarillo;
+              }
+            }
+          }
+          img{
+            width: 85%;
+            height: auto;
+            margin-top: 10rem;
+          }
+        }
+      }
+    
+      h2 {
+        margin-bottom: 2rem;
+        color: $amarillo;
+        font-size: 3.5rem;
+        text-align: center;
+        font-family: $letra;
+        -webkit-text-stroke: 0.5px $violeta;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 1);
+      }
+    
+      button {
+        background-color: $violeta;
+        color: $amarillo;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0px 0px 2px black;
+        width: 250px;
+        font-family: $letra;
+        font-size: 1.5rem;
+        border: 1px outset $violeta;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: $amarillo;
+        color: $violeta;
+        border: 1px outset $amarillo;
+        transition: 0.5s;
+      }
+      .socialMedia {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        a {
+          color: white;
+          font-family: $letra;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .portadaTurnoCorte{
+      height: auto;
+      background-image: none;
+    }
+    
+    @media screen and (min-width: 768px){
+      .portadaTurno, .portadaTurnoCorte{
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.5914740896358543) 40%, rgba(171,171,171,0) 100%),url(../img/PortadaDesktop.png);
+        .navContainer{
+          justify-content: space-around;
+          align-items: center;
+          img{
+            margin: 0;
+          }
+          .menuHamburguesa{
+            display: none;
+          }
+          nav{
+            display: none;
+          }
+          .navGrande{
+            display: block;
+            width: 70%;
+    
+            ul{
+              display: flex;
+              list-style: none;
+              justify-content: space-around;
+              li{
+                a{
+                  text-decoration: none;
+                  color: white;
+                  font-family: $letra;
+                  font-size: 1.5rem;
+                  transition: color 0.2s;
+                  
+                }
+                a:hover{
+                  color: $amarillo;
+                  -webkit-text-stroke: 0.5px $violeta;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+

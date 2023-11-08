@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../sass/style.css">
+    <link rel="shortcut icon" href="../img/Logo.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="../js/main.js" defer></script>
+    <title>Hoolingang Cuts - Corte y Barba</title>
+</head>
+<body>
+    <div class="portadaTurnoCorte">
+        <div class="navContainer">
+            <img src="/img/Logo.svg" alt="Logo"/>
+            <div class="navGrande">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html">Dirección</a></li>
+                    <li><a href="../index.html">Servicios</a></li>
+                    <li><a href="../index.html">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="menuHamburguesa" id="open">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav id="nav">
+                <div class="closeContainer">
+                    <div class="closeExtra" id="close">
+                        <span>X</span>
+                    </div>
+                </div>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html">DIRECCIÓN</a></li>
+                    <li><a href="../index.html">SERVICIOS</a></li>
+                    <li><a href="">INSTAGRAM</a></li>
+                </ul>
+                <img src="/img/Logo.svg" alt="">
+            </nav>
+        </div>
+    </div>
+    <div class="agendaTurno">
+        <h2>AGENDA TU TURNO</h2>
+        <div class="calendario">
+            <!-- Cal inline embed code begins -->
+            <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+                <script type="text/javascript">
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", {origin:"https://cal.com"});
+
+                Cal("inline", {
+	            elementOrSelector:"#my-cal-inline",
+	            calLink: "hooligangcuts/corte-barba",
+	            layout: "month_view"
+                });
+  
+                Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+                </script>
+            <!-- Cal inline embed code ends -->
+        </div>
+        <div class="ases">
+           <img src="../img/as-de-espadas (1) 17.png" alt="">
+           <img src="../img/as-de-espadas 17.png" alt="">
+           <img src="../img/as-de-espadas (1) 17.png" alt="">
+           <img src="../img/as-de-espadas 17.png" alt="">
+           <img src="../img/as-de-espadas (1) 17.png" alt="">
+           <img src="../img/as-de-espadas 17.png" alt="">
+        </div>
+
+    </div>
+    <footer>
+        <div class="branding">
+            <img class="brand" src="../img/Logo.svg" alt="Hoolingang Cuts">
+        </div>
+        <div id="dir" class="direccion">
+            <h2>DIRECCIÓN</h2>
+            <h3>MIGUEL SOLER 862, ESQUINA CARLOS MOREL</h3>
+            <h3>BURZACO</h3>
+        </div>
+        <div class="buttonFooter"><button class="btnTurno">AGENDA TU TURNO</button></div>
+        <div class="infoFooter">
+            <div class="socialMedia">
+                <a href="https://www.instagram.com/hooligang_cuts/" target="_blank"><img src="../img/instagram.png" alt="Instagram"></a>
+                <a href="https://www.instagram.com/hooligang_cuts/" target="_blank">HOOLIGNANG_CUTS</a>
+            </div>
+        </div>  
+    </footer>
+</body>
+</html>
